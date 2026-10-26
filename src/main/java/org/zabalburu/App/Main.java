@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -79,18 +77,37 @@ public class Main {
                 tipozombie, vidazombie
         ));
 
-        int Día =1;
-        for (int i =1; i < 6; i++){
-            System.out.println("Día "+ i);
-            if(vidapersonaje<30){
+        int Día = 1;
+        for (int i = 1; i < 6; i++) {
+            System.out.println("Día " + i);
+            if (vidapersonaje < 30) {
                 System.out.println("ESTADO CRÍTICO");
             } else if (vidapersonaje >= 30 && vidapersonaje <= 70) {
                 System.out.println("HERIDO");
             } else if (vidapersonaje > 70) {
                 System.out.println("ESTABLE");
-                
+
             }
         }
+        int puntos = 0;
+        int opcion = 0;
+        do {
+
+            System.out.println("1. hacer una mision");
+            System.out.println("2. Explorar");
+            System.out.print("Seleccione opción: ");
+            opcion = sc.nextInt();
+            if (opcion == 1) {
+                System.out.println("has completado una misión");
+                puntos += 30;
+                System.out.println("===================================================================");
+                System.out.println("Puntos totales: " + puntos);
+            } else if (opcion == 2) {
+                System.out.println("No has encontrado nada");
+                System.out.println("__________________________________________________________________");
+
+            }
+        } while (puntos < 100);
 
     }
 
