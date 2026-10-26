@@ -3,8 +3,8 @@ package org.zabalburu.Domain;
 public class Personaje {
 
     private static String nombre;
-    private static String tipo;
-    private static int vida;
+    private static String tipopersonaje;
+    private static int vidapersonaje;
     private static int habilidad;
     private static int botiquines;
 
@@ -20,26 +20,26 @@ public class Personaje {
         return nombre;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipopersonaje() {
+        return tipopersonaje;
     }
 
     public int getVida() {
-        return vida;
+        return vidapersonaje;
     }
 
 
-    public Personaje(String nombre, String tipo, int vida, int daño, int botiquines) {
+    public Personaje(String nombre, String tipopersonaje, int vidapersonaje, int daño, int botiquines) {
         this.nombre = nombre;
-        this.tipo = tipo;
-        this.vida = vida;
+        this.tipopersonaje = tipopersonaje;
+        this.vidapersonaje = vidapersonaje;
         this.habilidad = habilidad;
         this.botiquines = botiquines;
     }
 
     @Override
     public String toString() {
-        return "Personaje [nombre=" + nombre + ", tipo=" + tipo + ", vida=" + vida + ", habilidad=" + habilidad + ", botiquines="
+        return "Personaje [nombre=" + nombre + ", tipo=" + tipopersonaje + ", vida=" + vidapersonaje + ", habilidad=" + habilidad + ", botiquines="
                 + botiquines + "]";
     }
 
