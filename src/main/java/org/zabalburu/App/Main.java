@@ -70,12 +70,6 @@ public class Main {
                 vidazombie = 50;
 
         }
-        System.out.println("""
-            Al estar distraido buscando suministros, pisaste una lata y llamaste la atención de un %s,
-            gracias a tu habilidad sabes que el zombie tiene %d de vida    
-            """.formatted(
-                tipozombie, vidazombie
-        ));
 
         int Día = 1;
         for (int i = 1; i < 6; i++) {
@@ -108,6 +102,38 @@ public class Main {
 
             }
         } while (puntos < 100);
+
+        String nombremision = switch ((int) (Math.random() * 2 + 1)) {
+            case 1 ->
+                "combatir zombies";
+            case 2 ->
+                "Explorar vivienda";
+            default ->
+                throw new AssertionError();
+        };
+        System.out.println(nombremision);
+        System.out.println("=============================================================================");
+
+        System.out.println("""
+            Al estar distraido buscando suministros, pisaste una lata y llamaste la atención de un %s,
+            gracias a tu habilidad sabes que el zombie tiene %d de vida, que acción tomas:
+            1. Atacar
+            2. Huir
+            3. Usar Botiquín
+            """.formatted(
+                tipozombie, vidazombie
+        ));
+
+        int dañopersonaje = 0;
+        int dañozombie = 0;
+        boolean huir = false;
+
+        switch (sc.nextInt()) {
+
+          
+        }
+
+
 
     }
 
