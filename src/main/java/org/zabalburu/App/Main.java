@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -17,10 +19,10 @@ public class Main {
                 3.Bombero
                 """);
         int clase = sc.nextInt();
-        String tipopersonaje;
-        int vidapersonaje;
-        int botiquines;
-        int habilidad;
+        String tipopersonaje = null;
+        int vidapersonaje = 0;
+        int botiquines = 0;
+        int habilidad = 0;
         sc.nextLine();
         switch (clase) {
             case 1:
@@ -41,7 +43,55 @@ public class Main {
                 botiquines = 1;
                 habilidad = 7;
                 break;
+
         }
-        
+        System.out.println("""
+            Bienvenido %s, 
+            tu clase es %s 
+            tu vida es %d
+            tu número de botiquines es %d
+            tu habilidad es %d
+            """.formatted(
+                nombre, tipopersonaje, vidapersonaje, botiquines, habilidad));
+
+        System.out.println("Pruebazombie");
+        int tipoAleatorio = (int) (Math.random() * 3 + 1);
+        int vidazombie = 0;
+        String tipozombie = null;
+
+        switch (tipoAleatorio) {
+
+            case 1:
+                tipozombie = "Caminante";
+                vidazombie = 20;
+            case 2:
+                tipozombie = "Corredor";
+                vidazombie = 35;
+            case 3:
+                tipozombie = "Tanque";
+                vidazombie = 50;
+
+        }
+        System.out.println("""
+            Al estar distraido buscando suministros, pisaste una lata y llamaste la atención de un %s,
+            gracias a tu habilidad sabes que el zombie tiene %d de vida    
+            """.formatted(
+                tipozombie, vidazombie
+        ));
+
+        int Día =1;
+        for (int i =1; i < 6; i++){
+            System.out.println("Día "+ i);
+            if(vidapersonaje<30){
+                System.out.println("ESTADO CRÍTICO");
+            } else if (vidapersonaje >= 30 && vidapersonaje <= 70) {
+                System.out.println("HERIDO");
+            } else if (vidapersonaje > 70) {
+                System.out.println("ESTABLE");
+                
+            }
+        }
+
     }
+
 }
