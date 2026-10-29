@@ -1,4 +1,4 @@
-package org.zabalburu.App;
+package main.java.org.zabalburu.App;
 
 import java.util.Scanner;
 
@@ -47,7 +47,7 @@ public class Main {
                 botiquines = 1;
                 habilidad = 7;
                 break;
-            default:                 
+            default:
                 tipopersonaje = "Policía";
                 vidapersonaje = 100;
                 botiquines = 2;
@@ -94,12 +94,12 @@ public class Main {
                         ======================================
                             ESTADO CRÍTICO
                         """);
-            } else if (vidapersonaje >= 30 && vidapersonaje <= 70) {
+            } else if (vidapersonaje <= 70) {
                 System.out.println("""
                         ======================================
                                 HERIDA
                             """);
-            } else if (vidapersonaje > 70) {
+            } else {
                 System.out.println("""
                         ======================================
                                 ESTABLE
@@ -119,7 +119,7 @@ public class Main {
                 System.out.println("========================================");
                 opcion = sc.nextInt();
                 if (opcion == 1) {
-                    System.out.println("has completado una misión"); /*Meter misiones antes de esta linea */
+                    System.out.println("has completado una misión"); /* Meter misiones antes de esta linea */
                     puntos += 30;
                     System.out.println("===================================================================");
                     System.out.println("Puntos totales: " + puntos);
@@ -129,11 +129,7 @@ public class Main {
 
                 }
 
-
-
-
-
-            } while (puntos < 100);
+            } while (puntos <= 100);
 
             String nombremision = switch ((int) (Math.random() * 2 + 1)) {
                 case 1 ->
@@ -167,22 +163,19 @@ public class Main {
 
         int dañopersonaje = 0;
         int dañozombie = 0;
-        boolean huir = false;
+        Boolean huida = false;
+        int opcion = 0;
 
-        while (vidazombie>0 && vidapersonaje>0){
+        while (vidazombie > 0 && vidapersonaje > 0 && huida == false) {
+            switch (key) {
+                case value:
 
-            switch (tipozombie) {
-                case "Caminante":
-                case "Corredor":
-                case "Tanque":
-                    break;
-            
                 default:
-                    break;
+
             }
 
-    
-}
+        }
+
         switch (sc.nextInt()) {
 
         }

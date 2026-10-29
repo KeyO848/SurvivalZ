@@ -1,5 +1,4 @@
 package org.zabalburu.Domain;
-
 public class Zombies {
 
     public static String Tipozombie;

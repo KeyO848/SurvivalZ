@@ -1,5 +1,4 @@
 package org.zabalburu.Domain;
-
 public class Personaje {
 
     private static String nombre;
